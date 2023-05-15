@@ -1,0 +1,128 @@
+a {
+    font-size: 16px;
+}
+
+.nav-area {
+    background: #5d5d5d;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 55px;
+}
+
+.nav-area ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-area > ul > li {
+    position: relative;
+}
+
+.nav-area .icon-left {
+    float: left;
+}
+
+.nav-area .icon-right {
+    float: right;
+}
+
+.nav-area ul li a {
+    text-decoration: none;
+    color: #adb5bd;
+    padding: 16px 22px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-area ul li a img.icon {
+    height: 60px;
+    width: 70px;
+    margin: -22px -12px;
+}
+
+.nav-area ul li:hover a {
+    background: #34495a;
+}
+
+.nav-area ul ul {
+    position: absolute;
+    padding: 0;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+
+.nav-area ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-area ul ul li:hover a {
+    background: #262626;
+}
+
+.nav-area ul ul li {
+    position: relative;
+}
+
+.nav-area ul ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-area ul ul ul ul, .nav-area ul ul li:last-child ul {
+    max-height: 218px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.nav-area ul ul ul li:hover a {
+    background: #34495a;
+}
+
+.nav-area ul ul ul ul li:hover a {
+    background: #262626;
+}
+
+.nav-area .button {
+    font-size: 20px;
+    padding: 8px;
+    margin: 8px 16px;
+    color: #adb5bd;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+.nav-area .button:active {
+    transform: scale(0.9);
+}
+
+.nav-area .button:hover {
+    background: #34495a;
+}
+
+@media only screen and (max-width: 640px) {
+    .hidden-icon {
+        display: none;
+    }
+}
